@@ -1139,3 +1139,593 @@ src/test/java/examples/petstore/user.feature:31
 [{"bookingid":1},{"bookingid":11},{"bookingid":12},{"bookingid":13},{"bookingid":14},{"bookingid":15},{"bookingid":16},{"bookingid":17},{"bookingid":18},{"bookingid":19},{"bookingid":20},{"bookingid":21},{"bookingid":22},{"bookingid":24},{"bookingid":25},{"bookingid":26},{"bookingid":28},{"bookingid":29},{"bookingid":30},{"bookingid":31},{"bookingid":33},{"bookingid":34},{"bookingid":35},{"bookingid":36},{"bookingid":37},{"bookingid":38},{"bookingid":39},{"bookingid":40},{"bookingid":41},{"bookingid":42},{"bookingid":43},{"bookingid":45},{"bookingid":46}]
 
 23:51:11.082 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/booking.feature
+01:39:44.481 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+01:39:44.487 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1778999984487
+01:39:44.527 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 3 - ^CP01 Crear token$
+01:39:46.428 [main] INFO  com.intuit.karate - karate.env system property was: null 
+01:39:46.503 [main] ERROR com.intuit.karate - src/test/java/examples/booking/bookings4.feature:6
+And header Content-Type = "application/json" #Solo si es necesario, dependiendo del endpoint
+js failed:
+>>>>
+01: "application/json" #Solo si es necesario, dependiendo del endpoint
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:19 Expected ; but found #Solo
+"application/json" #Solo si es necesario, dependiendo del endpoint
+                   ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:425)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:139)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:135)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1190)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2143)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2062)
+- com.intuit.karate.core.ScenarioEngine.header(ScenarioEngine.java:407)
+
+src/test/java/examples/booking/bookings4.feature:6
+01:39:47.850 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+01:40:09.808 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+01:40:09.815 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779000009814
+01:40:09.864 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 3 - ^CP01 Crear token$
+01:40:11.683 [main] INFO  com.intuit.karate - karate.env system property was: null 
+01:40:12.471 [main] DEBUG com.intuit.karate - request:
+1 > POST https://restful-booker.herokuapp.com/auth
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 45
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"admin","password":"password123"}
+
+01:40:14.087 [main] DEBUG com.intuit.karate - response time in milliseconds: 1611
+1 < 200
+1 < Content-Length: 27
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Sun, 17 May 2026 06:40:14 GMT
+1 < Etag: W/"1b-WyVPqTYY2dtdHL9smMTt/m4XXV8"
+1 < Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=jmohxrbO69t1f0vpS5xRHWBtiuDAZ9Z%2Bm0FWCBLCfQs%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1779000014"}],"max_age":3600}
+1 < Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=jmohxrbO69t1f0vpS5xRHWBtiuDAZ9Z%2Bm0FWCBLCfQs%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1779000014"
+1 < Server: Heroku
+1 < Via: 1.1 heroku-router
+1 < X-Powered-By: Express
+{"token":"a34d875a9d855e1"}
+
+01:40:16.263 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+01:49:55.119 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+01:49:55.133 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779000595132
+01:49:55.172 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 12 - ^CP02 Create booking con request invocado desde un archivo json \(read\)$
+01:49:56.788 [main] INFO  com.intuit.karate - karate.env system property was: null 
+01:49:56.866 [main] ERROR com.intuit.karate - src/test/java/examples/booking/bookings4.feature:15
+And request read('createBooking.json')
+js failed:
+>>>>
+01: read('createBooking.json')
+<<<<
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: /Users/pa.rivera/Desktop/CAPACITACION/QA Team/Karate/Automatizacion/karate-qa-team/src/test/java/examples/booking/createBooking.json (No such file or directory)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:95)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:54)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:120)
+- <js>.:program(Unnamed:1)
+
+src/test/java/examples/booking/bookings4.feature:15
+01:49:57.919 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+01:50:26.701 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+01:50:26.706 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779000626706
+01:50:26.744 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 12 - ^CP02 Create booking con request invocado desde un archivo json \(read\)$
+01:50:28.258 [main] INFO  com.intuit.karate - karate.env system property was: null 
+01:50:28.826 [main] DEBUG com.intuit.karate - request:
+1 > POST https://restful-booker.herokuapp.com/booking
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 169
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+{"firstname":"Jimi","lastname":"Brown","totalprice":112,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}
+
+01:50:29.572 [main] DEBUG com.intuit.karate - response time in milliseconds: 743
+1 < 418
+1 < Content-Length: 12
+1 < Content-Type: text/plain; charset=utf-8
+1 < Date: Sun, 17 May 2026 06:50:29 GMT
+1 < Etag: W/"c-2UDTmC4hdG5PUA+z8oDkrgejuV8"
+1 < Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=NHqPZKgQ4c4kL1mseDz5AG8u%2FgHBpytOSlt5uBg6%2FwE%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1779000629"}],"max_age":3600}
+1 < Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=NHqPZKgQ4c4kL1mseDz5AG8u%2FgHBpytOSlt5uBg6%2FwE%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1779000629"
+1 < Server: Heroku
+1 < Via: 1.1 heroku-router
+1 < X-Powered-By: Express
+I'm a Teapot
+
+01:50:29.574 [main] ERROR com.intuit.karate - src/test/java/examples/booking/bookings4.feature:17
+Then status 200
+status code was: 418, expected: 200, response time in milliseconds: 743, url: https://restful-booker.herokuapp.com/booking, response: 
+I'm a Teapot
+src/test/java/examples/booking/bookings4.feature:17
+01:50:30.952 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+01:51:14.287 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+01:51:14.292 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779000674292
+01:51:14.327 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 12 - ^CP02 Create booking con request invocado desde un archivo json \(read\)$
+01:51:15.713 [main] INFO  com.intuit.karate - karate.env system property was: null 
+01:51:16.223 [main] DEBUG com.intuit.karate - request:
+1 > POST https://restful-booker.herokuapp.com/booking
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 171
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+{"firstname":"Daata","lastname":"Brown","totalprice":1000,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}
+
+01:51:16.926 [main] DEBUG com.intuit.karate - response time in milliseconds: 700
+1 < 418
+1 < Content-Length: 12
+1 < Content-Type: text/plain; charset=utf-8
+1 < Date: Sun, 17 May 2026 06:51:16 GMT
+1 < Etag: W/"c-2UDTmC4hdG5PUA+z8oDkrgejuV8"
+1 < Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=WpXMBxlnQq4%2BrpcJJiEDSvcsJ6iQtF7uF5ipPFaY1BE%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1779000676"}],"max_age":3600}
+1 < Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=WpXMBxlnQq4%2BrpcJJiEDSvcsJ6iQtF7uF5ipPFaY1BE%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1779000676"
+1 < Server: Heroku
+1 < Via: 1.1 heroku-router
+1 < X-Powered-By: Express
+I'm a Teapot
+
+01:51:16.929 [main] ERROR com.intuit.karate - src/test/java/examples/booking/bookings4.feature:17
+Then status 200
+status code was: 418, expected: 200, response time in milliseconds: 700, url: https://restful-booker.herokuapp.com/booking, response: 
+I'm a Teapot
+src/test/java/examples/booking/bookings4.feature:17
+01:51:17.887 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+02:22:26.729 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+02:22:26.734 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779002546734
+02:22:26.772 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 31 - ^CP03 Update booking con request form urlencoded y token$
+02:22:28.388 [main] INFO  com.intuit.karate - karate.env system property was: null 
+02:22:28.465 [main] ERROR com.intuit.karate - src/test/java/examples/booking/bookings4.feature:34
+And path "/booking/" + #{id}
+js failed:
+>>>>
+01: "/booking/" + #{id}
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:14 Expected an operand but found error
+"/booking/" + #{id}
+              ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:425)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:139)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:135)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1190)
+- com.intuit.karate.core.ScenarioEngine.path(ScenarioEngine.java:379)
+- com.intuit.karate.ScenarioActions.path(ScenarioActions.java:82)
+- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+src/test/java/examples/booking/bookings4.feature:34
+02:22:29.594 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+02:23:30.417 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+02:23:30.423 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779002610423
+02:23:30.455 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 31 - ^CP03 Update booking con request form urlencoded y token$
+02:23:31.879 [main] INFO  com.intuit.karate - karate.env system property was: null 
+02:23:31.956 [main] ERROR com.intuit.karate - src/test/java/examples/booking/bookings4.feature:37
+And request form field firstname = "Jim"
+js failed:
+>>>>
+01: form field firstname = "Jim"
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:5 Expected ; but found field
+form field firstname = "Jim"
+     ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:425)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:139)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:135)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1190)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2143)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2062)
+- com.intuit.karate.core.ScenarioEngine.request(ScenarioEngine.java:533)
+
+src/test/java/examples/booking/bookings4.feature:37
+02:23:32.949 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+02:25:01.007 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+02:25:01.013 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779002701012
+02:25:01.049 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 31 - ^CP03 Update booking con request form urlencoded y token$
+02:25:02.439 [main] INFO  com.intuit.karate - karate.env system property was: null 
+02:25:02.974 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://restful-booker.herokuapp.com/booking/12
+1 > Content-Type: application/x-www-form-urlencoded
+1 > Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+1 > Content-Length: 135
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+firstname=Jim&lastname=Brown&totalprice=111&depositpaid=true&bookingdates%5Bcheckin%5D=2018-01-01&bookingdates%5Bcheckout%5D=2018-01-02
+
+02:25:03.722 [main] DEBUG com.intuit.karate - response time in milliseconds: 746
+1 < 418
+1 < Content-Length: 12
+1 < Content-Type: text/plain; charset=utf-8
+1 < Date: Sun, 17 May 2026 07:25:03 GMT
+1 < Etag: W/"c-2UDTmC4hdG5PUA+z8oDkrgejuV8"
+1 < Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=IPCYSer8yJX0gpOOIAlVLwGqsZ92%2BQCSrusUq%2BwAtvQ%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1779002703"}],"max_age":3600}
+1 < Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=IPCYSer8yJX0gpOOIAlVLwGqsZ92%2BQCSrusUq%2BwAtvQ%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1779002703"
+1 < Server: Heroku
+1 < Via: 1.1 heroku-router
+1 < X-Powered-By: Express
+I'm a Teapot
+
+02:25:04.795 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+02:36:06.771 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+02:36:06.777 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779003366776
+02:36:06.824 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 47 - ^CP03\.1 Update de request form urlencoded con read y form fields$
+02:36:08.347 [main] INFO  com.intuit.karate - karate.env system property was: null 
+02:36:08.932 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://restful-booker.herokuapp.com/booking/12
+1 > Content-Type: application/x-www-form-urlencoded
+1 > Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+1 > Content-Length: 100
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+firstname=Daata&lastname=Brown&totalprice=1000&depositpaid=true&bookingdates%5Bcheckin%5D=2019-01-01
+
+02:36:09.686 [main] DEBUG com.intuit.karate - response time in milliseconds: 751
+1 < 400
+1 < Content-Length: 11
+1 < Content-Type: text/plain; charset=utf-8
+1 < Date: Sun, 17 May 2026 07:36:09 GMT
+1 < Etag: W/"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8"
+1 < Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2F3t0VvTWcFf2iuHyOQXQiELsY3n0ZwsG0IKxYOBq77A%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1779003369"}],"max_age":3600}
+1 < Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=%2F3t0VvTWcFf2iuHyOQXQiELsY3n0ZwsG0IKxYOBq77A%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1779003369"
+1 < Server: Heroku
+1 < Via: 1.1 heroku-router
+1 < X-Powered-By: Express
+Bad Request
+
+02:36:09.689 [main] ERROR com.intuit.karate - src/test/java/examples/booking/bookings4.feature:56
+Then status 418
+status code was: 400, expected: 418, response time in milliseconds: 751, url: https://restful-booker.herokuapp.com/booking/12, response: 
+Bad Request
+src/test/java/examples/booking/bookings4.feature:56
+02:36:10.649 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+02:36:20.302 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+02:36:20.308 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779003380307
+02:36:20.338 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 47 - ^CP03\.1 Update de request form urlencoded con read y form fields$
+02:36:21.588 [main] INFO  com.intuit.karate - karate.env system property was: null 
+02:36:22.118 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://restful-booker.herokuapp.com/booking/12
+1 > Content-Type: application/x-www-form-urlencoded
+1 > Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+1 > Content-Length: 100
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+firstname=Daata&lastname=Brown&totalprice=1000&depositpaid=true&bookingdates%5Bcheckin%5D=2019-01-01
+
+02:36:22.737 [main] DEBUG com.intuit.karate - response time in milliseconds: 616
+1 < 400
+1 < Content-Length: 11
+1 < Content-Type: text/plain; charset=utf-8
+1 < Date: Sun, 17 May 2026 07:36:22 GMT
+1 < Etag: W/"b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8"
+1 < Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=XPN7PgHUGxlyiXgFKIE%2B3LBYhwJfqMUFUv1YUoc7%2BSg%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1779003382"}],"max_age":3600}
+1 < Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=XPN7PgHUGxlyiXgFKIE%2B3LBYhwJfqMUFUv1YUoc7%2BSg%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1779003382"
+1 < Server: Heroku
+1 < Via: 1.1 heroku-router
+1 < X-Powered-By: Express
+Bad Request
+
+02:36:23.666 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/booking/bookings4.feature
+03:11:41.180 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:11:41.189 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779005501189
+03:11:41.237 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 3 - ^CP001 - Crear un producto$
+03:11:42.858 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:11:42.944 [main] ERROR com.intuit.karate - src/test/java/examples/fakeApi/examples.feature:6
+And path "/products""
+js failed:
+>>>>
+01: "/products""
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:12 Missing close quote
+"/products""
+            ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:425)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:139)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:135)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1190)
+- com.intuit.karate.core.ScenarioEngine.path(ScenarioEngine.java:379)
+- com.intuit.karate.ScenarioActions.path(ScenarioActions.java:82)
+- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+src/test/java/examples/fakeApi/examples.feature:6
+03:11:44.018 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:12:02.109 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:12:02.114 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779005522113
+03:12:02.148 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 3 - ^CP001 - Crear un producto$
+03:12:03.454 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:12:03.518 [main] ERROR com.intuit.karate - src/test/java/examples/fakeApi/examples.feature:6
+And path "/products""
+js failed:
+>>>>
+01: "/products""
+<<<<
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:12 Missing close quote
+"/products""
+            ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:425)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:139)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:135)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1190)
+- com.intuit.karate.core.ScenarioEngine.path(ScenarioEngine.java:379)
+- com.intuit.karate.ScenarioActions.path(ScenarioActions.java:82)
+- java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+src/test/java/examples/fakeApi/examples.feature:6
+03:12:04.464 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:12:24.989 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:12:24.994 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779005544993
+03:12:25.034 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 3 - ^CP001 - Crear un producto$
+03:12:26.413 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:12:26.469 [main] ERROR com.intuit.karate - src/test/java/examples/fakeApi/examples.feature:7
+And request bodyProduct
+js failed:
+>>>>
+01: bodyProduct
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "bodyProduct" is not defined
+- <js>.:program(Unnamed:1)
+
+src/test/java/examples/fakeApi/examples.feature:7
+03:12:27.381 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:13:41.898 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:13:41.903 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779005621903
+03:13:41.937 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 3 - ^CP001 - Crear un producto$
+03:13:43.294 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:13:43.776 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fakestoreapi.com/products
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 113
+1 > Host: fakestoreapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+{"id":21,"title":"mouse","price":30,"description":"novus","category":"tecnologia","image":"http:\/\/example.com"}
+
+03:13:44.739 [main] DEBUG com.intuit.karate - response time in milliseconds: 960
+1 < 201
+1 < Date: Sun, 17 May 2026 08:13:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 111
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < etag: W/"6f-u2bFittqdUb0ydbKuzz1I9Vfy4U"
+1 < x-powered-by: Express
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=7,cfOrigin;dur=505
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=hYomMPiE2U1DpJ3qD1Zjh6uCQ4%2BHLfSaIKJp2KfFqUCWwRmZW1sfNM5F3dxtGglU2BMgRcgkBGWqohUWrcB0UBD2ubR83TKkfjWX3RtCTdppICTPUj4dXRKyiLge0ctefhML"}]}
+1 < Server: cloudflare
+1 < CF-RAY: 9fd12a208f2c7449-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"id":21,"title":"mouse","price":30,"description":"novus","image":"http://example.com","category":"tecnologia"}
+
+03:13:45.690 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:29:24.965 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:29:24.974 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779006564974
+03:29:25.012 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 13 - ^CP02 Actualizar cartas con archivo read con arreglo \(each\) y variables$
+03:29:26.582 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:29:26.651 [main] ERROR com.intuit.karate - src/test/java/examples/fakeApi/examples.feature:14
+* def bodyCart = read('bodyCart.json')
+js failed:
+>>>>
+01: read('bodyCart.json')
+<<<<
+org.graalvm.polyglot.PolyglotException: java.io.FileNotFoundException: /Users/pa.rivera/Desktop/CAPACITACION/QA Team/Karate/Automatizacion/karate-qa-team/src/test/java/examples/fakeApi/bodyCart.json (No such file or directory)
+- com.intuit.karate.resource.FileResource.getStream(FileResource.java:98)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsStream(ScenarioFileReader.java:99)
+- com.intuit.karate.core.ScenarioFileReader.readFileAsString(ScenarioFileReader.java:95)
+- com.intuit.karate.core.ScenarioFileReader.readFile(ScenarioFileReader.java:54)
+- com.intuit.karate.core.ScenarioEngine.lambda$new$0(ScenarioEngine.java:120)
+- <js>.:program(Unnamed:1)
+
+src/test/java/examples/fakeApi/examples.feature:14
+03:29:27.663 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:29:46.131 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:29:46.137 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779006586136
+03:29:46.180 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 13 - ^CP02 Actualizar cartas con archivo read con arreglo \(each\) y variables$
+03:29:48.136 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:29:48.783 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://fakestoreapi.com/carts/1
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 44
+1 > Host: fakestoreapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+{"userId":1,"products":[{"id":2},{"id":21}]}
+
+03:29:49.804 [main] DEBUG com.intuit.karate - response time in milliseconds: 1018
+1 < 200
+1 < Date: Sun, 17 May 2026 08:29:50 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < etag: W/"33-iAsVYEn6M2XJ2U95wC+yNfHyjaI"
+1 < x-powered-by: Express
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=8,cfOrigin;dur=502
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=m%2FB3ShrFrp80pcvHMPaqdQeOl5VnPrYKsmt3ZCU%2B4275%2FajylNCTSPJx5jn3d6GLozq%2FGFn5HqNSvqaRNn4btmcdDOw%2FIiCuVcSuCkSpEm71NGD65H37nNkU9%2Bp6ZfRzPpmA"}]}
+1 < Server: cloudflare
+1 < CF-RAY: 9fd141b06a63db2d-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"id":1,"userId":1,"products":[{"id":2},{"id":21}]}
+
+03:29:50.722 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:35:18.962 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:35:18.968 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779006918967
+03:35:19.008 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 13 - ^CP02 Actualizar cartas con archivo read con arreglo \(each\) y variables$
+03:35:20.493 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:35:20.982 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://fakestoreapi.com/carts/1
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 44
+1 > Host: fakestoreapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+{"userId":1,"products":[{"id":2},{"id":21}]}
+
+03:35:21.962 [main] DEBUG com.intuit.karate - response time in milliseconds: 978
+1 < 200
+1 < Date: Sun, 17 May 2026 08:35:22 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < etag: W/"33-iAsVYEn6M2XJ2U95wC+yNfHyjaI"
+1 < x-powered-by: Express
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=6,cfOrigin;dur=504
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ZitaiXc1N96pGdD5ko9iSHk1ANyn2nyAgmbPgB0xixC5SIr1CzheXu%2FsD68LeWTbW8569VVFapbREUN3IobUMpCppzS9yI2%2BAVmqqhFO336gnkuY4qp3n3NEhPWnfTvlq85K"}]}
+1 < Server: cloudflare
+1 < CF-RAY: 9fd149cc79fcf3e0-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"id":1,"userId":1,"products":[{"id":2},{"id":21}]}
+
+03:35:22.920 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:59:21.013 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:59:21.020 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779008361019
+03:59:21.063 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 25 - ^CP03 Get user single con variables de response$
+03:59:22.615 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:59:22.688 [main] ERROR com.intuit.karate - src/test/java/examples/fakeApi/examples.feature:28
+And path "users" , userId
+js failed:
+>>>>
+01: ["users" , userId]
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "userId" is not defined
+- <js>.:program(Unnamed:1)
+
+src/test/java/examples/fakeApi/examples.feature:28
+03:59:23.872 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+03:59:29.383 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+03:59:29.388 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779008369387
+03:59:29.433 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 25 - ^CP03 Get user single con variables de response$
+03:59:30.579 [main] INFO  com.intuit.karate - karate.env system property was: null 
+03:59:30.874 [main] DEBUG com.intuit.karate - request:
+1 > GET https://fakestoreapi.com/users/1
+1 > Host: fakestoreapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+03:59:31.907 [main] DEBUG com.intuit.karate - response time in milliseconds: 1029
+1 < 200
+1 < Date: Sun, 17 May 2026 08:59:32 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < etag: W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
+1 < x-powered-by: Express
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=4,cfOrigin;dur=607
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=GY0hhaHzgY7E15L0sgl8yX8kGmUJNi6ZcJ9OGtg75HwaPB0aA11gSoMVy2nMUmGDcKwyw1hv3VDVjN8MoK0DIaU1PdeOMN2YSGTh2uLWE1CyKSvOnzHzWogWp7TTcDBER0iJ"}]}
+1 < Server: cloudflare
+1 < CF-RAY: 9fd16d322cb9dfe6-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"address":{"geolocation":{"lat":"-37.3159","long":"81.1496"},"city":"kilcoole","street":"new road","number":7682,"zipcode":"12926-3874"},"id":1,"email":"john@gmail.com","username":"johnd","password":"m38rmF$","name":{"firstname":"john","lastname":"doe"},"phone":"1-570-236-7033","__v":0}
+
+03:59:33.160 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+04:01:55.193 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+04:01:55.197 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779008515197
+04:01:55.229 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 25 - ^CP03 Get user single con variables de response$
+04:01:56.392 [main] INFO  com.intuit.karate - karate.env system property was: null 
+04:01:56.710 [main] DEBUG com.intuit.karate - request:
+1 > GET https://fakestoreapi.com/users/1
+1 > Host: fakestoreapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+04:01:57.447 [main] DEBUG com.intuit.karate - response time in milliseconds: 734
+1 < 200
+1 < Date: Sun, 17 May 2026 09:01:57 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < etag: W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
+1 < x-powered-by: Express
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=5,cfOrigin;dur=230
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=FKJgd92bq47jYEVGzn13LWhaG9xxDF7bRAQ2jrcvp1e3R%2BpJRS95q1PywX5kzo4uIRzi2fiyKD5TGrEm5u07HHUvnOmXyjY1OxAAsf55WI%2BLio1%2BIZEHckkVgyXz4kiiikEN"}]}
+1 < Server: cloudflare
+1 < CF-RAY: 9fd170c1489ca64c-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"address":{"geolocation":{"lat":"-37.3159","long":"81.1496"},"city":"kilcoole","street":"new road","number":7682,"zipcode":"12926-3874"},"id":1,"email":"john@gmail.com","username":"johnd","password":"m38rmF$","name":{"firstname":"john","lastname":"doe"},"phone":"1-570-236-7033","__v":0}
+
+04:01:57.503 [main] ERROR com.intuit.karate - src/test/java/examples/fakeApi/examples.feature:34
+And match $name contains {"firstname": "john","lastname": "doe"}
+js failed:
+>>>>
+01: name
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "name" is not defined
+- <js>.:program(Unnamed:1)
+
+src/test/java/examples/fakeApi/examples.feature:34
+04:01:58.202 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature
+04:02:26.456 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+04:02:26.461 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1779008546460
+04:02:26.484 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 25 - ^CP03 Get user single con variables de response$
+04:02:27.536 [main] INFO  com.intuit.karate - karate.env system property was: null 
+04:02:27.810 [main] DEBUG com.intuit.karate - request:
+1 > GET https://fakestoreapi.com/users/1
+1 > Host: fakestoreapi.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.16.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+04:02:28.790 [main] DEBUG com.intuit.karate - response time in milliseconds: 978
+1 < 200
+1 < Date: Sun, 17 May 2026 09:02:28 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < etag: W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
+1 < x-powered-by: Express
+1 < cf-cache-status: DYNAMIC
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=5,cfOrigin;dur=609
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tKu0h8kliL8Syl3KkksjM%2BMLLxE%2Bkv41YqfVhCsdycICmZ8m1kpi2kHCgcampCbOITA6fVACMDIziLmTSVI6K5o7025PrA%2BzSY7Z6suK2esvc83Scr81dhsLuVz2s6vxfGZd"}]}
+1 < Server: cloudflare
+1 < CF-RAY: 9fd171835b9b4851-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{"address":{"geolocation":{"lat":"-37.3159","long":"81.1496"},"city":"kilcoole","street":"new road","number":7682,"zipcode":"12926-3874"},"id":1,"email":"john@gmail.com","username":"johnd","password":"m38rmF$","name":{"firstname":"john","lastname":"doe"},"phone":"1-570-236-7033","__v":0}
+
+04:02:29.540 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/examples/fakeApi/examples.feature

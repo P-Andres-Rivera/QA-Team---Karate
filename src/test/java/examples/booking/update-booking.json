@@ -1,0 +1,8 @@
+{
+  "firstname" : "Daata",
+  "lastname" : "Brown",
+  "totalprice" : 1000,
+  "depositpaid" : true,
+  "bookingdates[checkin]" : "2018-01-01",
+  "bookingdates[checkin]" : "2019-01-01"
+  }
